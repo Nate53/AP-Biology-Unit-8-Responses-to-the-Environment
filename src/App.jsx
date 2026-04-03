@@ -1394,6 +1394,7 @@ const AnimalBehaviorSection = ({ lang }) => {
             <p><strong>{lang === 'es' ? 'Fototaxis' : 'Phototaxis'}:</strong> {lang === 'es' ? 'Respuesta a luz' : 'Response to light'}</p>
             <p><strong>{lang === 'es' ? 'Quimiotaxis' : 'Chemotaxis'}:</strong> {lang === 'es' ? 'Respuesta a químicos' : 'Response to chemicals'}</p>
             <p><strong>{lang === 'es' ? 'Termotaxis' : 'Thermotaxis'}:</strong> {lang === 'es' ? 'Respuesta a temperatura' : 'Response to temperature'}</p>
+            <p><strong>{lang === 'es' ? 'Tigmotaxis' : 'Thigmotaxis'}:</strong> {lang === 'es' ? 'Respuesta a contacto/presión' : 'Response to touch/pressure'}</p>
           </div>
         </div>
       </div>
