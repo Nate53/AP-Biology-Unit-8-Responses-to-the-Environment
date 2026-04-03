@@ -1030,10 +1030,10 @@ const PhotoperiodismSection = ({ lang }) => {
           </div>
           <div className="mt-3 bg-purple-50 rounded-lg p-3">
             <p className="text-sm text-gray-700">
-              <RichText text={lang === 'es'
-                ? '**P<sub>fr</sub> es la forma biológicamente activa.** Durante la luz del día, P<sub>r</sub> se convierte rápidamente a P<sub>fr</sub>. En la oscuridad, P<sub>fr</sub> vuelve lentamente a P<sub>r</sub>. Las concentraciones relativas de P<sub>r</sub> y P<sub>fr</sub> le dan a la planta la capacidad de medir la duración de la noche.'
-                : '**P<sub>fr</sub> is the biologically active form.** During daylight, P<sub>r</sub> converts rapidly to P<sub>fr</sub>. In darkness, P<sub>fr</sub> slowly reverts to P<sub>r</sub>. The relative concentrations of P<sub>r</sub> and P<sub>fr</sub> give the plant the ability to measure night length.'
-              } />
+              {lang === 'es'
+                ? <><strong>P<sub>fr</sub> es la forma biológicamente activa.</strong> Durante la luz del día, P<sub>r</sub> se convierte rápidamente a P<sub>fr</sub>. En la oscuridad, P<sub>fr</sub> vuelve lentamente a P<sub>r</sub>. Las concentraciones relativas de P<sub>r</sub> y P<sub>fr</sub> le dan a la planta la capacidad de medir la duración de la noche.</>
+                : <><strong>P<sub>fr</sub> is the biologically active form.</strong> During daylight, P<sub>r</sub> converts rapidly to P<sub>fr</sub>. In darkness, P<sub>fr</sub> slowly reverts to P<sub>r</sub>. The relative concentrations of P<sub>r</sub> and P<sub>fr</sub> give the plant the ability to measure night length.</>
+              }
             </p>
           </div>
         </div>
