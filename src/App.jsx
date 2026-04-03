@@ -436,12 +436,20 @@ const TropismSimulator = ({ lang }) => {
             ctx.fillText('●', baseX + 10, baseY - t2 * 120);
           }
         }
-        // Legend
+        // Legend box (top-left, white background for readability)
+        const legendX = 8, legendY = 8;
+        ctx.fillStyle = 'rgba(255,255,255,0.92)';
+        ctx.strokeStyle = '#D1D5DB';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.roundRect(legendX, legendY, 130, 42, 6);
+        ctx.fill();
+        ctx.stroke();
         ctx.fillStyle = '#7C3AED';
         ctx.font = 'bold 11px sans-serif';
-        ctx.fillText('● = ' + (lang === 'es' ? 'Alta auxina' : 'High auxin'), 10, h * 0.7 + 20);
+        ctx.fillText('● = ' + (lang === 'es' ? 'Alta auxina' : 'High auxin'), legendX + 8, legendY + 16);
         ctx.fillStyle = '#C4B5FD';
-        ctx.fillText('● = ' + (lang === 'es' ? 'Baja auxina' : 'Low auxin'), 10, h * 0.7 + 35);
+        ctx.fillText('● = ' + (lang === 'es' ? 'Baja auxina' : 'Low auxin'), legendX + 8, legendY + 33);
       }
 
       // Root (negative phototropism)
@@ -515,19 +523,36 @@ const TropismSimulator = ({ lang }) => {
         for (let i = 0; i < 2; i++) {
           ctx.fillText('●', baseX - 16, baseY - i * 20 - 60);
         }
+        // Legend box (top-left, white background for readability)
+        const legendX2 = 8, legendY2 = 8;
+        ctx.fillStyle = 'rgba(255,255,255,0.92)';
+        ctx.strokeStyle = '#D1D5DB';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.roundRect(legendX2, legendY2, 130, 42, 6);
+        ctx.fill();
+        ctx.stroke();
         ctx.fillStyle = '#7C3AED';
         ctx.font = 'bold 11px sans-serif';
-        ctx.fillText('● = ' + (lang === 'es' ? 'Alta auxina' : 'High auxin'), 10, h * 0.7 + 20);
+        ctx.fillText('● = ' + (lang === 'es' ? 'Alta auxina' : 'High auxin'), legendX2 + 8, legendY2 + 16);
         ctx.fillStyle = '#C4B5FD';
-        ctx.fillText('● = ' + (lang === 'es' ? 'Baja auxina' : 'Low auxin'), 10, h * 0.7 + 35);
+        ctx.fillText('● = ' + (lang === 'es' ? 'Baja auxina' : 'Low auxin'), legendX2 + 8, legendY2 + 33);
 
         // Statoliths
         ctx.fillStyle = '#F59E0B';
         ctx.font = '9px sans-serif';
         ctx.fillText('◆ ◆ ◆', baseX - 8, baseY + 48);
+        // Statoliths legend (added to the white legend box)
+        ctx.fillStyle = 'rgba(255,255,255,0.92)';
+        ctx.strokeStyle = '#D1D5DB';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.roundRect(legendX2, legendY2 + 48, 130, 22, 6);
+        ctx.fill();
+        ctx.stroke();
         ctx.fillStyle = '#92400E';
-        ctx.font = '10px sans-serif';
-        ctx.fillText(lang === 'es' ? '◆ Estatolitos' : '◆ Statoliths', 10, h * 0.7 + 50);
+        ctx.font = 'bold 10px sans-serif';
+        ctx.fillText(lang === 'es' ? '◆ = Estatolitos' : '◆ = Statoliths', legendX2 + 8, legendY2 + 63);
       }
     } else if (tropism === 'thigmo') {
       const baseX = w / 2 - 30;
