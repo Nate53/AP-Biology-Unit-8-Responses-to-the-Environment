@@ -1664,6 +1664,153 @@ const challengeQuestions = {
 };
 
 // ═══════════════════════════════════════════════════════════════════════
+// GLOSSARY
+// ═══════════════════════════════════════════════════════════════════════
+const glossaryTerms = [
+  // Signal Transduction & Behavior
+  { en: ['Stimulus', 'An environmental change detected by an organism that triggers a response.'], es: ['Estímulo', 'Un cambio ambiental detectado por un organismo que desencadena una respuesta.'], category: 'intro' },
+  { en: ['Response', 'An organism\'s reaction to a stimulus; may involve behavior or growth changes.'], es: ['Respuesta', 'La reacción de un organismo a un estímulo; puede involucrar cambios de comportamiento o crecimiento.'], category: 'intro' },
+  { en: ['Signal Transduction', 'The process by which a cell converts an external signal into a functional response: stimulus → receptor → transduction → response.'], es: ['Transducción de Señales', 'El proceso por el cual una célula convierte una señal externa en una respuesta funcional: estímulo → receptor → transducción → respuesta.'], category: 'intro' },
+  { en: ['Innate Behavior', 'A genetically programmed behavior that does not require learning; passed from parent to offspring.'], es: ['Comportamiento Innato', 'Un comportamiento programado genéticamente que no requiere aprendizaje; se transmite de padres a hijos.'], category: 'intro' },
+  { en: ['Adaptive Behavior', 'A behavior that increases an organism\'s fitness (ability to survive and reproduce).'], es: ['Comportamiento Adaptativo', 'Un comportamiento que aumenta la aptitud de un organismo (capacidad de sobrevivir y reproducirse).'], category: 'intro' },
+  { en: ['Fitness', 'An organism\'s ability to survive and reproduce in its environment.'], es: ['Aptitud', 'La capacidad de un organismo para sobrevivir y reproducirse en su ambiente.'], category: 'intro' },
+
+  // Tropisms
+  { en: ['Tropism', 'A directional growth response of a plant toward or away from an environmental stimulus.'], es: ['Tropismo', 'Una respuesta de crecimiento direccional de una planta hacia o alejándose de un estímulo ambiental.'], category: 'tropisms' },
+  { en: ['Phototropism', 'Plant growth response to light. Shoots show positive phototropism (grow toward light).'], es: ['Fototropismo', 'Respuesta de crecimiento de la planta a la luz. Los brotes muestran fototropismo positivo (crecen hacia la luz).'], category: 'tropisms' },
+  { en: ['Gravitropism', 'Plant growth response to gravity. Roots grow toward gravity (positive); shoots grow away (negative).'], es: ['Gravitropismo', 'Respuesta de crecimiento de la planta a la gravedad. Las raíces crecen hacia la gravedad (positivo); los brotes se alejan (negativo).'], category: 'tropisms' },
+  { en: ['Thigmotropism', 'Plant growth response to touch or pressure. Tendrils coiling around a support is an example.'], es: ['Tigmotropismo', 'Respuesta de crecimiento de la planta al contacto o presión. Los zarcillos enrollándose alrededor de un soporte son un ejemplo.'], category: 'tropisms' },
+  { en: ['Chemotropism', 'Plant growth response to a chemical gradient. Pollen tube growth toward the ovule is an example.'], es: ['Quimiotropismo', 'Respuesta de crecimiento de la planta a un gradiente químico. El crecimiento del tubo polínico hacia el óvulo es un ejemplo.'], category: 'tropisms' },
+  { en: ['Statoliths', 'Starch-filled plastids in root cap cells that settle in response to gravity, triggering auxin redistribution.'], es: ['Estatolitos', 'Plastidios llenos de almidón en las células de la caliptra que se asientan en respuesta a la gravedad, desencadenando la redistribución de auxina.'], category: 'tropisms' },
+
+  // Plant Hormones
+  { en: ['Auxin (IAA)', 'Plant hormone produced in shoot tips; promotes cell elongation, phototropism, gravitropism, and apical dominance.'], es: ['Auxina (IAA)', 'Hormona vegetal producida en los ápices de los brotes; promueve elongación celular, fototropismo, gravitropismo y dominancia apical.'], category: 'hormones' },
+  { en: ['Apical Dominance', 'The suppression of lateral bud growth by auxin produced in the apical (terminal) bud.'], es: ['Dominancia Apical', 'La supresión del crecimiento de yemas laterales por la auxina producida en la yema apical (terminal).'], category: 'hormones' },
+  { en: ['Gibberellins (GA)', 'Plant hormones that promote stem elongation, seed germination (activate amylase), and break dormancy.'], es: ['Giberelinas (GA)', 'Hormonas vegetales que promueven la elongación del tallo, germinación de semillas (activan amilasa) y rompen la dormancia.'], category: 'hormones' },
+  { en: ['Cytokinins (CK)', 'Plant hormones produced in root tips; promote cell division, delay senescence, and oppose auxin in apical dominance.'], es: ['Citoquininas (CK)', 'Hormonas vegetales producidas en las puntas de las raíces; promueven la división celular, retrasan la senescencia y se oponen a la auxina en la dominancia apical.'], category: 'hormones' },
+  { en: ['Abscisic Acid (ABA)', 'The "stress hormone"; promotes seed dormancy, stomatal closure during water stress, and leaf abscission.'], es: ['Ácido Abscísico (ABA)', 'La "hormona del estrés"; promueve la dormancia de semillas, el cierre estomático durante estrés hídrico y la abscisión foliar.'], category: 'hormones' },
+  { en: ['Ethylene (C₂H₄)', 'The only gaseous plant hormone; promotes fruit ripening, leaf abscission, and senescence. Exhibits positive feedback.'], es: ['Etileno (C₂H₄)', 'La única hormona vegetal gaseosa; promueve la maduración de frutos, abscisión foliar y senescencia. Exhibe retroalimentación positiva.'], category: 'hormones' },
+  { en: ['Senescence', 'The aging process in plants leading to deterioration and death of cells, organs, or the whole organism.'], es: ['Senescencia', 'El proceso de envejecimiento en plantas que lleva al deterioro y muerte de células, órganos o todo el organismo.'], category: 'hormones' },
+  { en: ['Abscission', 'The controlled shedding of leaves, fruits, or flowers from a plant, forming an abscission layer at the petiole base.'], es: ['Abscisión', 'La caída controlada de hojas, frutos o flores de una planta, formando una capa de abscisión en la base del pecíolo.'], category: 'hormones' },
+
+  // Photoperiodism
+  { en: ['Photoperiodism', 'An organism\'s response to the relative lengths of day and night (photoperiod). Plants actually measure night length.'], es: ['Fotoperiodismo', 'La respuesta de un organismo a la duración relativa del día y la noche (fotoperíodo). Las plantas realmente miden la duración de la noche.'], category: 'photoperiodism' },
+  { en: ['Phytochrome', 'A blue-green pigment in plants that detects light; exists in two interconvertible forms (Pr and Pfr).'], es: ['Fitocromo', 'Un pigmento azul-verdoso en plantas que detecta la luz; existe en dos formas interconvertibles (Pr y Pfr).'], category: 'photoperiodism' },
+  { en: ['Pr (inactive form)', 'The inactive form of phytochrome that absorbs red light (660nm) and converts to Pfr. Predominates in darkness.'], es: ['Pr (forma inactiva)', 'La forma inactiva del fitocromo que absorbe luz roja (660nm) y se convierte en Pfr. Predomina en la oscuridad.'], category: 'photoperiodism' },
+  { en: ['Pfr (active form)', 'The biologically active form of phytochrome that absorbs far-red light (730nm). Slowly reverts to Pr in darkness.'], es: ['Pfr (forma activa)', 'La forma biológicamente activa del fitocromo que absorbe luz rojo-lejano (730nm). Revierte lentamente a Pr en la oscuridad.'], category: 'photoperiodism' },
+  { en: ['Critical Night Length', 'The minimum (for SDP) or maximum (for LDP) uninterrupted dark period required to trigger flowering.'], es: ['Duración Crítica de la Noche', 'El período oscuro ininterrumpido mínimo (para PDC) o máximo (para PDL) requerido para desencadenar la floración.'], category: 'photoperiodism' },
+  { en: ['Short-Day Plant (SDP)', 'A plant that flowers when the night length exceeds its critical value. More accurately a "long-night plant." Ex: chrysanthemum, poinsettia.'], es: ['Planta de Día Corto (PDC)', 'Una planta que florece cuando la duración de la noche excede su valor crítico. Más precisamente una "planta de noche larga." Ej: crisantemo, poinsettia.'], category: 'photoperiodism' },
+  { en: ['Long-Day Plant (LDP)', 'A plant that flowers when the night length is shorter than its critical value. More accurately a "short-night plant." Ex: spinach, lettuce.'], es: ['Planta de Día Largo (PDL)', 'Una planta que florece cuando la duración de la noche es menor que su valor crítico. Más precisamente una "planta de noche corta." Ej: espinaca, lechuga.'], category: 'photoperiodism' },
+  { en: ['Dormancy', 'A state of arrested growth during unfavorable conditions, promoted by ABA. Broken by cold (vernalization) and gibberellins.'], es: ['Dormancia', 'Un estado de crecimiento detenido durante condiciones desfavorables, promovido por ABA. Se rompe con frío (vernalización) y giberelinas.'], category: 'photoperiodism' },
+  { en: ['Vernalization', 'A period of cold exposure required to break dormancy or induce flowering in some plant species.'], es: ['Vernalización', 'Un período de exposición al frío requerido para romper la dormancia o inducir la floración en algunas especies de plantas.'], category: 'photoperiodism' },
+
+  // Animal Behavior
+  { en: ['Kinesis', 'A non-directional response to a stimulus. The organism changes its speed (orthokinesis) or turning rate (klinokinesis).'], es: ['Kinesis', 'Una respuesta no-direccional a un estímulo. El organismo cambia su velocidad (ortokinesis) o tasa de giro (clinokinesis).'], category: 'behavior' },
+  { en: ['Orthokinesis', 'A type of kinesis where the organism changes its speed of movement in response to stimulus intensity.'], es: ['Ortokinesis', 'Un tipo de kinesis donde el organismo cambia su velocidad de movimiento en respuesta a la intensidad del estímulo.'], category: 'behavior' },
+  { en: ['Klinokinesis', 'A type of kinesis where the organism changes its rate of turning in response to stimulus intensity.'], es: ['Clinokinesis', 'Un tipo de kinesis donde el organismo cambia su tasa de giro en respuesta a la intensidad del estímulo.'], category: 'behavior' },
+  { en: ['Taxis', 'A directional response to a stimulus. The organism moves toward (positive) or away from (negative) the stimulus.'], es: ['Taxis', 'Una respuesta direccional a un estímulo. El organismo se mueve hacia (positiva) o alejándose (negativa) del estímulo.'], category: 'behavior' },
+  { en: ['Phototaxis', 'A directional movement in response to light. Ex: maggots show negative phototaxis (move away from light).'], es: ['Fototaxis', 'Un movimiento direccional en respuesta a la luz. Ej: las larvas muestran fototaxis negativa (se alejan de la luz).'], category: 'behavior' },
+  { en: ['Chemotaxis', 'A directional movement in response to a chemical gradient. Ex: moths flying toward pheromones (positive chemotaxis).'], es: ['Quimiotaxis', 'Un movimiento direccional en respuesta a un gradiente químico. Ej: polillas volando hacia feromonas (quimiotaxis positiva).'], category: 'behavior' },
+  { en: ['Thermotaxis', 'A directional movement in response to temperature. Ex: mosquitoes flying toward body heat (positive thermotaxis).'], es: ['Termotaxis', 'Un movimiento direccional en respuesta a la temperatura. Ej: mosquitos volando hacia el calor corporal (termotaxis positiva).'], category: 'behavior' },
+  { en: ['Thigmotaxis', 'A directional movement in response to touch or pressure. Ex: spiny lobsters backing into crevices.'], es: ['Tigmotaxis', 'Un movimiento direccional en respuesta al contacto o presión. Ej: langostas espinosas retrocediendo hacia grietas.'], category: 'behavior' },
+  { en: ['Choice Chamber', 'An apparatus with two connected environments used to investigate animal preferences and behavior (kinesis or taxis).'], es: ['Cámara de Elección', 'Un aparato con dos ambientes conectados utilizado para investigar las preferencias y comportamiento animal (kinesis o taxis).'], category: 'behavior' },
+];
+
+const categoryLabels = {
+  intro: { en: 'Signal Transduction & Behavior', es: 'Transducción de Señales y Comportamiento' },
+  tropisms: { en: 'Plant Tropisms', es: 'Tropismos Vegetales' },
+  hormones: { en: 'Plant Hormones', es: 'Hormonas Vegetales' },
+  photoperiodism: { en: 'Photoperiodism & Timing', es: 'Fotoperiodismo y Temporización' },
+  behavior: { en: 'Animal Behavior', es: 'Comportamiento Animal' },
+};
+
+const categoryColors = {
+  intro: 'bg-blue-100 text-blue-800 border-blue-200',
+  tropisms: 'bg-green-100 text-green-800 border-green-200',
+  hormones: 'bg-purple-100 text-purple-800 border-purple-200',
+  photoperiodism: 'bg-indigo-100 text-indigo-800 border-indigo-200',
+  behavior: 'bg-amber-100 text-amber-800 border-amber-200',
+};
+
+const Glossary = ({ lang }) => {
+  const [search, setSearch] = useState('');
+  const [filterCat, setFilterCat] = useState('all');
+
+  const filtered = glossaryTerms.filter(term => {
+    const [termName, termDef] = term[lang] || term.en;
+    const matchesSearch = !search || termName.toLowerCase().includes(search.toLowerCase()) || termDef.toLowerCase().includes(search.toLowerCase());
+    const matchesCat = filterCat === 'all' || term.category === filterCat;
+    return matchesSearch && matchesCat;
+  });
+
+  return (
+    <div className="learn-chunk">
+      <h2 className="text-xl font-bold text-brand-800 mb-2 flex items-center gap-2">
+        <span className="text-2xl">📖</span>
+        {lang === 'es' ? 'Glosario' : 'Glossary'}
+      </h2>
+      <p className="text-gray-600 mb-4">
+        {lang === 'es'
+          ? 'Referencia rápida de todos los términos clave cubiertos en esta unidad.'
+          : 'Quick reference for all key terms covered in this unit.'}
+      </p>
+
+      {/* Search and filter */}
+      <div className="flex flex-col sm:flex-row gap-3 mb-4">
+        <input
+          type="text"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          placeholder={lang === 'es' ? '🔍 Buscar un término...' : '🔍 Search for a term...'}
+          className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
+        />
+        <select
+          value={filterCat}
+          onChange={e => setFilterCat(e.target.value)}
+          className="px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white"
+        >
+          <option value="all">{lang === 'es' ? 'Todas las secciones' : 'All sections'}</option>
+          {Object.entries(categoryLabels).map(([key, labels]) => (
+            <option key={key} value={key}>{labels[lang] || labels.en}</option>
+          ))}
+        </select>
+      </div>
+
+      <p className="text-xs text-gray-400 mb-3">
+        {lang === 'es'
+          ? `Mostrando ${filtered.length} de ${glossaryTerms.length} términos`
+          : `Showing ${filtered.length} of ${glossaryTerms.length} terms`}
+      </p>
+
+      {/* Terms by category */}
+      {(filterCat === 'all' ? Object.keys(categoryLabels) : [filterCat]).map(cat => {
+        const termsInCat = filtered.filter(t => t.category === cat);
+        if (termsInCat.length === 0) return null;
+        return (
+          <div key={cat} className="mb-5">
+            <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border mb-3 ${categoryColors[cat]}`}>
+              {(categoryLabels[cat]?.[lang] || categoryLabels[cat]?.en)}
+            </div>
+            <div className="space-y-2">
+              {termsInCat.map((term, i) => {
+                const [termName, termDef] = term[lang] || term.en;
+                return (
+                  <div key={i} className="bg-white rounded-lg p-3 border border-gray-200 hover:border-brand-300 transition-colors">
+                    <span className="font-semibold text-brand-800">{termName}</span>
+                    <span className="text-gray-400 mx-2">—</span>
+                    <span className="text-sm text-gray-600">{termDef}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+// ═══════════════════════════════════════════════════════════════════════
 // MAIN APP
 // ═══════════════════════════════════════════════════════════════════════
 export default function App() {
@@ -1792,6 +1939,7 @@ export default function App() {
                   { id: 'section-hormones', icon: '🧪', label: lang === 'es' ? 'Hormonas Vegetales' : 'Plant Hormones' },
                   { id: 'section-photoperiodism', icon: '🌗', label: lang === 'es' ? 'Fotoperiodismo' : 'Photoperiodism' },
                   { id: 'section-behavior', icon: '🐛', label: lang === 'es' ? 'Comportamiento Animal' : 'Animal Behavior' },
+                  { id: 'section-glossary', icon: '📖', label: lang === 'es' ? 'Glosario' : 'Glossary' },
                 ].map(sec => (
                   <button
                     key={sec.id}
@@ -1816,6 +1964,7 @@ export default function App() {
             <div id="section-hormones"><PlantHormonesExplorer lang={lang} /></div>
             <div id="section-photoperiodism"><PhotoperiodismSection lang={lang} /></div>
             <div id="section-behavior"><AnimalBehaviorSection lang={lang} /></div>
+            <div id="section-glossary"><Glossary lang={lang} /></div>
           </>
         )}
 
