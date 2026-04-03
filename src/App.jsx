@@ -437,7 +437,7 @@ const TropismSimulator = ({ lang }) => {
           }
         }
         // Legend box (top-left, white background for readability)
-        const legendX = 8, legendY = 8;
+        const legendX = 8, legendY = h * 0.7 - 52;
         ctx.fillStyle = 'rgba(255,255,255,0.92)';
         ctx.strokeStyle = '#D1D5DB';
         ctx.lineWidth = 1;
