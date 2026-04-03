@@ -620,6 +620,11 @@ const TropismSimulator = ({ lang }) => {
       ctx.bezierCurveTo(baseX + 40, baseY + 5, baseX + 80, baseY + 10, baseX + 110, baseY + 15);
       ctx.stroke();
 
+      // Pollen tube label
+      ctx.fillStyle = '#92400E';
+      ctx.font = '9px sans-serif';
+      ctx.fillText(lang === 'es' ? 'Tubo polínico' : 'Pollen tube', baseX + 45, baseY + 25);
+
       // Ovule
       ctx.fillStyle = '#F9A8D4';
       ctx.beginPath();
@@ -696,6 +701,20 @@ const TropismSimulator = ({ lang }) => {
         <div className="bg-gradient-to-b from-sky-100 to-sky-50 rounded-xl p-3 mb-3 flex justify-center">
           <canvas ref={canvasRef} width={300} height={250} className="rounded-lg" />
         </div>
+
+        {/* Thigmotropism real photo */}
+        {tropism === 'thigmo' && (
+          <div className="flex flex-col items-center mb-3">
+            <img
+              src="/squash-plant-tendril.jpg"
+              alt={lang === 'es' ? 'Zarcillo de planta de calabaza enrollándose alrededor de un soporte' : 'Squash plant tendril coiling around a support'}
+              className="rounded-xl border border-brand-200 shadow-sm max-w-[240px] w-full"
+            />
+            <p className="text-xs text-gray-500 mt-2 italic">
+              {lang === 'es' ? 'Zarcillo de calabaza — un ejemplo de tigmotropismo positivo' : 'Squash tendril — an example of positive thigmotropism'}
+            </p>
+          </div>
+        )}
 
         {/* Controls */}
         <div className="flex flex-wrap gap-3 items-center">
