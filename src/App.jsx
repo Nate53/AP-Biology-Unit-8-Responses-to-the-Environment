@@ -189,6 +189,34 @@ const IntroSection = ({ lang }) => {
             )
           )}
         </div>
+
+        {/* Concrete example */}
+        <div className="mt-4 bg-white rounded-xl p-4 border border-brand-100">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+            {lang === 'es' ? 'Ejemplo: Fototropismo en una plántula' : 'Example: Phototropism in a seedling'}
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+            {[
+              { label: lang === 'es' ? 'Estímulo' : 'Stimulus', icon: '☀️', sub: lang === 'es' ? 'Luz desde un lado' : 'Light from one side' },
+              { label: '→', icon: '', sub: '' },
+              { label: lang === 'es' ? 'Receptor' : 'Receptor', icon: '🔵', sub: lang === 'es' ? 'Fotorreceptores en el ápice del brote' : 'Photoreceptors in shoot tip' },
+              { label: '→', icon: '', sub: '' },
+              { label: lang === 'es' ? 'Transducción' : 'Transduction', icon: '🔀', sub: lang === 'es' ? 'La auxina migra al lado sombreado' : 'Auxin migrates to shaded side' },
+              { label: '→', icon: '', sub: '' },
+              { label: lang === 'es' ? 'Respuesta' : 'Response', icon: '🌱', sub: lang === 'es' ? 'El tallo se curva hacia la luz' : 'Stem bends toward light' },
+            ].map((step, i) =>
+              step.icon ? (
+                <div key={i} className="bg-green-50 rounded-xl px-3 py-2.5 border border-green-200 flex-1 min-w-0">
+                  <div className="text-lg mb-0.5">{step.icon}</div>
+                  <div className="font-semibold text-green-800 text-xs">{step.label}</div>
+                  <div className="text-xs text-gray-500 mt-0.5">{step.sub}</div>
+                </div>
+              ) : (
+                <div key={i} className="text-green-400 font-bold text-lg hidden sm:block">→</div>
+              )
+            )}
+          </div>
+        </div>
       </div>
 
       {/* Behavior Type Cards */}
