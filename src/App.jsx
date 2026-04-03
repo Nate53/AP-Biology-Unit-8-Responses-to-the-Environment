@@ -1779,11 +1779,42 @@ export default function App() {
       <main className="max-w-5xl mx-auto px-4 py-6">
         {activeTab === 'learn' && (
           <>
-            <IntroSection lang={lang} />
-            <TropismSimulator lang={lang} />
-            <PlantHormonesExplorer lang={lang} />
-            <PhotoperiodismSection lang={lang} />
-            <AnimalBehaviorSection lang={lang} />
+            {/* Section Jump Nav */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 mb-6">
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                {lang === 'es' ? 'Ir a la sección' : 'Jump to section'}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { id: 'section-intro', icon: '🔬', label: lang === 'es' ? 'Intro: Detectar y Responder' : 'Intro: Detect & Respond' },
+                  { id: 'section-tropisms', icon: '🌱', label: lang === 'es' ? 'Tropismos Vegetales' : 'Plant Tropisms' },
+                  { id: 'section-hormones', icon: '🧪', label: lang === 'es' ? 'Hormonas Vegetales' : 'Plant Hormones' },
+                  { id: 'section-photoperiodism', icon: '🌗', label: lang === 'es' ? 'Fotoperiodismo' : 'Photoperiodism' },
+                  { id: 'section-behavior', icon: '🐛', label: lang === 'es' ? 'Comportamiento Animal' : 'Animal Behavior' },
+                ].map(sec => (
+                  <button
+                    key={sec.id}
+                    onClick={() => {
+                      const el = document.getElementById(sec.id);
+                      if (el) {
+                        const yOffset = -120;
+                        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                      }
+                    }}
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-brand-50 text-brand-700 border border-brand-200 hover:bg-brand-100 hover:shadow-sm transition-all"
+                  >
+                    <span>{sec.icon}</span> {sec.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div id="section-intro"><IntroSection lang={lang} /></div>
+            <div id="section-tropisms"><TropismSimulator lang={lang} /></div>
+            <div id="section-hormones"><PlantHormonesExplorer lang={lang} /></div>
+            <div id="section-photoperiodism"><PhotoperiodismSection lang={lang} /></div>
+            <div id="section-behavior"><AnimalBehaviorSection lang={lang} /></div>
           </>
         )}
 
