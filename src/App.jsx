@@ -437,19 +437,19 @@ const TropismSimulator = ({ lang }) => {
           }
         }
         // Legend box (top-left, white background for readability)
-        const legendX = 8, legendY = h * 0.7 - 52;
+        const legendX = 4, legendY = h * 0.7 - 48;
         ctx.fillStyle = 'rgba(255,255,255,0.92)';
         ctx.strokeStyle = '#D1D5DB';
         ctx.lineWidth = 1;
         ctx.beginPath();
-        ctx.roundRect(legendX, legendY, 130, 42, 6);
+        ctx.roundRect(legendX, legendY, 95, 38, 5);
         ctx.fill();
         ctx.stroke();
         ctx.fillStyle = '#7C3AED';
-        ctx.font = 'bold 11px sans-serif';
-        ctx.fillText('● = ' + (lang === 'es' ? 'Alta auxina' : 'High auxin'), legendX + 8, legendY + 16);
+        ctx.font = 'bold 10px sans-serif';
+        ctx.fillText('● ' + (lang === 'es' ? 'Alta auxina' : 'High auxin'), legendX + 6, legendY + 14);
         ctx.fillStyle = '#C4B5FD';
-        ctx.fillText('● = ' + (lang === 'es' ? 'Baja auxina' : 'Low auxin'), legendX + 8, legendY + 33);
+        ctx.fillText('● ' + (lang === 'es' ? 'Baja auxina' : 'Low auxin'), legendX + 6, legendY + 30);
       }
 
       // Root (negative phototropism)
